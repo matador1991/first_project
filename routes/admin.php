@@ -76,7 +76,15 @@ Route::group([
             route::post('/update','TeamMemberController@update')->name('member.update');
             route::get('/delete/{id}','TeamMemberController@delete')->name('member.delete');
         });
+
+        //News_Letters Operations
+        Route::group(['prefix'=>'news_letters'],function (){
+            route::get('/','NewsLetterController@index')->name('news_letter.index');
+            route::get('/delete/{id}','NewsLetterController@delete')->name('news_letter.delete');
+        });
     });
+
+
 
 
 });

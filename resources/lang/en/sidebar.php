@@ -13,4 +13,5 @@ return [
     'client-menu'=>'Clients Menu',
     'project'=>'Projects',
     'project-menu'=>'Projects Menu',
+    'news_letter'=>'News Letter Subscribers'
 ];

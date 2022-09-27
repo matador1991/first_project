@@ -75,6 +75,13 @@
                             <li><a href="{{route('member.create')}}">{{trans('member.create')}}</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="{{route('news_letter.index')}}">
+                            <div class="pull-left"><i class="ti-pencil"></i><span
+                                    class="right-nav-text">{{trans('sidebar.news_letter')}}</span></div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
 
                     <li>
                         <a href="todo-list.html"><i class="ti-menu-alt"></i><span class="right-nav-text">Todo

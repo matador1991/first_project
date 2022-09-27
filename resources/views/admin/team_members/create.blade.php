@@ -2,7 +2,7 @@
 @section('css')
 
 @section('title')
-    {{trans('project.create')}}
+    {{trans('member.create')}}
 @stop
 @endsection
 @section('page-header')
@@ -10,12 +10,12 @@
     <div class="page-title mt-2 pt-5">
         <div class="row ">
             <div class="col-sm-6">
-                <h4 class="mb-0">{{trans('project.create')}}</h4>
+                <h4 class="mb-0">{{trans('member.create')}}</h4>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
                     <li class="breadcrumb-item"><a href="#" class="default-color">{{trans('dashboard.dashboard')}}</a></li>
-                    <li class="breadcrumb-item active">{{trans('project.create')}}</li>
+                    <li class="breadcrumb-item active">{{trans('member.create')}}</li>
                 </ol>
             </div>
         </div>
@@ -29,11 +29,11 @@
     <div class="card-content collapse show">
         <div class="card-body">
             <form class="form"
-                  action="{{route('project.store')}}"
+                  action="{{route('member.store')}}"
                   method="POST"
                   enctype="multipart/form-data">
                 @csrf
-                    <h4 class="form-section"><i class="ft-home"></i> {{trans('project.data')}} </h4>
+                    <h4 class="form-section"><i class="ft-home"></i> {{trans('member.data')}} </h4>
                 <div class=" row pt-2 pb-2">
                     <div class="col-md-12">
                         <div class="form-group pt-1 ">
@@ -46,7 +46,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="projectinput1">
-                                        {{trans('project.name_ar')}}
+                                        {{trans('member.name_ar')}}
                                     </label>
                                     <input type="text" id="name"
                                            class="form-control"
@@ -61,7 +61,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="projectinput1">
-                                    {{trans('project.name_en')}}
+                                    {{trans('member.name_en')}}
                                 </label>
                                 <input type="text" id="name"
                                        class="form-control"
@@ -74,10 +74,42 @@
                             </div>
                         </div>
                     </div>
+                   <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="projectinput1">
+                                    {{trans('member.position_ar')}}
+                                </label>
+                                <input type="text" id="name"
+                                       class="form-control"
+                                       placeholder="  "
+                                       value="{{old('name')}}"
+                                       name="position_ar">
+                                @if($errors->has('position_ar'))
+                                    <div class="error">{{ $errors->first('position_ar') }}</div>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="projectinput1">
+                                    {{trans('member.position_en')}}
+                                </label>
+                                <input type="text" id="name"
+                                       class="form-control"
+                                       placeholder="  "
+                                       value="{{old('name')}}"
+                                       name="position_en">
+                                @if($errors->has('position_en'))
+                                    <div class="error">{{ $errors->first('position_en') }}</div>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group pt-1 ">
-                            <label for="switcheryColor4">{{trans('project.description_ar')}} </label>
+                            <label for="switcheryColor4">{{trans('member.description_ar')}} </label>
                         <textarea id="summernote1" name="description_ar" class="form-control"></textarea>
                         </div>
                     </div>
@@ -85,7 +117,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group pt-1 ">
-                            <label for="switcheryColor4">{{trans('project.description_en')}} </label>
+                            <label for="switcheryColor4">{{trans('member.description_en')}} </label>
                             <textarea id="summernote2" name="description_en" class="form-control"></textarea>
                         </div>
                     </div>

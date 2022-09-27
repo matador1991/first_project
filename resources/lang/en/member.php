@@ -16,6 +16,9 @@ return [
     'activate'=>'Active Team Member',
     'image'=>'Image',
     'parent'=>'Parent Team Member',
+    'position_ar'=>'Position In Arabic',
+    'position_en'=>'Position In English',
+    'position'=>'Position',
     'description_ar'=>'Arabic Description',
     'description_en'=>'English Description',
      'link'=>'Link'

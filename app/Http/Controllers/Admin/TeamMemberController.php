@@ -19,7 +19,7 @@ class TeamMemberController extends Controller
   public function index()
   {
       $members=TeamMember::get();
-      return view('admin.projects.index',compact('members'));
+      return view('admin.team_members.index',compact('members'));
   }
 
   public function create(){
@@ -32,7 +32,7 @@ class TeamMemberController extends Controller
           TeamMember::create([
               'name'=>['ar'=>$request->name_ar, 'en'=>$request->name_en],
               'description'=>['ar'=>$request->description_ar, 'en'=>$request->description_en],
-               'position'=>$request->position
+              'position'=>['ar'=>$request->position_ar, 'en'=>$request->position_en],
               ]);
 
           if($request->has('image')) {
@@ -55,8 +55,8 @@ class TeamMemberController extends Controller
   }
 
     public function edit($id){
-        $members=TeamMember::find($id);
-        return view('admin.team_members.edit',compact('members'));
+        $member=TeamMember::find($id);
+        return view('admin.team_members.edit',compact('member'));
     }
 
     public function update(Request $request){
@@ -72,7 +72,7 @@ class TeamMemberController extends Controller
           $members->update([
                'name'=>['ar'=>$request->name_ar, 'en'=>$request->name_en],
                'description'=>['ar'=>$request->description_ar, 'en'=>$request->description_en],
-               'position'=>$request->position
+               'position'=>['ar'=>$request->position_ar, 'en'=>$request->position_en],
            ]);
           if($request->has('image')) {
               if(File::exists(public_path($members->image))){
