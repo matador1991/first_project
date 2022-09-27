@@ -1,0 +1,42 @@
+<?php
+
+return [
+
+   'dashboard'=>'Dashboard',
+    'add'=>'Add',
+    'back'=>'Back',
+    'active'=>'Active',
+    'neg'=>'Not Active',
+    'edit'=>'Edit',
+    'delete'=>'Delete',
+    'update'=>'Update',
+    'createDone'=>'Create Done Successfully',
+    'error'=>'Something went wrong',
+    'notExsist'=>'Dose Not Exist',
+    'updateDone'=>'Update Done Successfully',
+    'deleteDone'=>'Delete Done Successfully',
+    'checkDelete'=>'Are you Sure For Delete?',
+    'check'=>'Are you Submit?',
+    'cancel'=>'Cancel',
+    'close'=>'Close',
+    'finish'=>'Finish',
+     'success'=>'Operation Done Successfully',
+    'attachments'=>'Attachments',
+     'next'=>'Next',
+    'email'=>'Email',
+    'description_ar'=>'Arabic Description',
+    'author_ar'=>'Arabic Author',
+    'keywords_ar'=>'Arabic Keywords',
+    'title_ar'=>'Arabic Website Title',
+    'phone1'=>'First Phone',
+    'address_ar'=>'Arabic Address',
+    'description_en'=>'English Description',
+    'author_en'=>'English Author',
+    'keywords_en'=>'English Keywords',
+    'title_en'=>'English Website Title',
+    'phone2'=>'Second Phone',
+    'logo'=>'Logo',
+    'address_en'=>'English Address',
+    'image'=>'Image'
+
+];
