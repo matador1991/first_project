@@ -60,36 +60,57 @@
                                     <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('dashboard.keywords_ar')}}<span class="text-danger">*</span></label>
                                     <div class="col-lg-4">
                                         <input required name="keywords_ar" value="{{$setting->getTranslation('keywords','ar')}}" type="text" class="form-control" placeholder="{{trans('dashboard.keywords_ar')}}">
+                                        @if($errors->has('keywords_ar'))
+                                            <div class="error">{{ $errors->first('keywords_ar') }}</div>
+                                        @endif
                                     </div>
                                     <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('dashboard.keywords_en')}}<span class="text-danger">*</span></label>
                                     <div class="col-lg-4">
                                         <input required name="keywords_en" value="{{$setting->getTranslation('keywords','en')}}" type="text" class="form-control" placeholder="{{trans('dashboard.keywords_en')}}">
+                                        @if($errors->has('keywords_en'))
+                                            <div class="error">{{ $errors->first('keywords_en') }}</div>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('dashboard.author_ar')}}<span class="text-danger">*</span></label>
                                     <div class="col-lg-4">
                                         <input required name="author_ar" value="{{$setting->getTranslation('author','ar')}}" type="text" class="form-control" placeholder="{{trans('dashboard.author_ar')}}">
+                                        @if($errors->has('author_ar'))
+                                            <div class="error">{{ $errors->first('author_ar') }}</div>
+                                        @endif
                                     </div>
                                     <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('dashboard.author_en')}}<span class="text-danger">*</span></label>
                                     <div class="col-lg-4">
                                         <input required name="author_en" value="{{$setting->getTranslation('author','en')}}" type="text" class="form-control" placeholder="{{trans('dashboard.author_en')}}">
+                                        @if($errors->has('author_en'))
+                                            <div class="error">{{ $errors->first('author_en') }}</div>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('dashboard.title_ar')}}</label>
+                                    <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('dashboard.title_ar')}}<span class="text-danger">*</span></label>
                                     <div class="col-lg-4">
                                         <input name="title_ar" value="{{$setting->getTranslation('title','ar')}}" type="text" class="form-control" placeholder="title_ar">
+                                        @if($errors->has('title_ar'))
+                                            <div class="error">{{ $errors->first('title_ar') }}</div>
+                                        @endif
                                     </div>
-                                    <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('dashboard.title_en')}}</label>
+                                    <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('dashboard.title_en')}}<span class="text-danger">*</span></label>
                                     <div class="col-lg-4">
                                         <input name="title_en" value="{{$setting->getTranslation('title','en')}}" type="text" class="form-control" placeholder="{{trans('dashboard.title_en')}}">
+                                        @if($errors->has('title_en'))
+                                            <div class="error">{{ $errors->first('title_en') }}</div>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('dashboard.phone1')}}</label>
+                                    <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('dashboard.phone1')}}<span class="text-danger">*</span></label>
                                     <div class="col-lg-4">
                                         <input name="first_phone" value="{{$setting->first_phone}}" type="text" class="form-control" placeholder="{{trans('dashboard.phone1')}}">
+                                        @if($errors->has('first_phone'))
+                                            <div class="error">{{ $errors->first('first_phone') }}</div>
+                                        @endif
                                     </div>
                                     <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('dashboard.phone2')}}</label>
                                     <div class="col-lg-4">
@@ -100,6 +121,9 @@
                                     <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('dashboard.email')}}</label>
                                     <div class="col-lg-4">
                                         <input name="email" value="{{$setting->email}}" type="email" class="form-control" placeholder="{{trans('dashboard.email')}}">
+                                        @if($errors->has('email'))
+                                            <div class="error">{{ $errors->first('email') }}</div>
+                                        @endif
                                     </div>
                                     <label class="col-lg-2 col-form-label font-weight-semibold">Facebook</label>
                                     <div class="col-lg-4">
@@ -131,12 +155,18 @@
                                     <div class="col-lg-10">
                                         <textarea required name="address_ar"  type="text" class="form-control" placeholder="{{trans('dashboard.address_ar')}}">{{$setting->getTranslation('address','ar')}}
                                         </textarea>
+                                        @if($errors->has('address_ar'))
+                                            <div class="error">{{ $errors->first('address_ar') }}</div>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('dashboard.address_en')}}<span class="text-danger">*</span></label>
                                     <div class="col-lg-10">
                                         <textarea required name="address_en"  type="text" class="form-control" placeholder="{{trans('dashboard.address_en')}}">{{$setting->getTranslation('address','en')}}</textarea>
+                                        @if($errors->has('address_en'))
+                                            <div class="error">{{ $errors->first('address_en') }}</div>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -144,6 +174,9 @@
                                     <div class="col-lg-10">
                                         {{--                                        id="summernote"--}}
                                         <textarea required name="description_ar"  class="form-control" placeholder="{{trans('dashboard.description_ar')}}">{{$setting->getTranslation('description','ar')}}</textarea>
+                                        @if($errors->has('description_ar'))
+                                            <div class="error">{{ $errors->first('description_ar') }}</div>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -151,15 +184,21 @@
                                     <div class="col-lg-10">
                                         {{--                                        id="summernote"--}}
                                         <textarea required name="description_en"  class="form-control" placeholder="{{trans('dashboard.description_en')}}">{{$setting->getTranslation('description','en')}}</textarea>
+                                        @if($errors->has('description_en'))
+                                            <div class="error">{{ $errors->first('description_en') }}</div>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('dashboard.logo')}}</label>
+                                    <label class="col-lg-2 col-form-label font-weight-semibold">{{trans('dashboard.logo')}}<span class="text-danger">*</span></label>
                                     <div class="col-lg-10">
                                         <div class="mb-3">
                                             <img style="width: 100px" height="100px" src="{{asset($setting->logo)}}" alt="">
                                         </div>
                                         <input name="logo" accept="image/*" type="file"  class="file-input" data-show-caption="false" data-show-upload="false" data-fouc>
+                                        @if($errors->has('logo'))
+                                            <div class="error">{{ $errors->first('logo') }}</div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

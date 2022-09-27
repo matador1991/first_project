@@ -13,5 +13,8 @@ return [
     'client-menu'=>'Clients Menu',
     'project'=>'Projects',
     'project-menu'=>'Projects Menu',
-    'news_letter'=>'News Letter Subscribers'
+    'news_letter'=>'News Letter Subscribers',
+    'member'=>'Team Members',
+    'member-menu'=>'Team Members Menu',
+    'admin'=>'Admin'
 ];

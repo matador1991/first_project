@@ -41,7 +41,7 @@ class AdminController extends Controller
           'password'=>bcrypt($request->password)
       ]);
       Auth()->logout();
-      return redirect()->route('adminGetLogin')->with([
+      return redirect()->route('dashboard')->with([
              'alert-type'=> 'success',
             'message' =>trans('dashboard.success')
             ]);

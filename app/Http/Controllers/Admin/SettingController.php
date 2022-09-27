@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\SettingRequest;
 use App\models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -15,7 +16,7 @@ class SettingController extends Controller
         return view('admin.settings.index',compact('settings'));
     }
 
-    public function update(Request $request){
+    public function update(SettingRequest $request){
         try{
             $setting=Setting::find($request->id);
             $setting->update([

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProjectRequest;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -26,7 +27,7 @@ class ProjectController extends Controller
       return view('admin.projects.create');
   }
 
-  public function store(Request $request){
+  public function store(ProjectRequest $request){
       try{
 
           Project::create([
@@ -46,7 +47,6 @@ class ProjectController extends Controller
               'message' =>trans('dashboard.success')
           ]);
       }catch(\Exception $ex){
-          return $ex;
           return redirect()->route('project.index')->with([
               'alert-type'=> 'danger',
               'message' =>trans('dashboard.error')
@@ -59,7 +59,7 @@ class ProjectController extends Controller
         return view('admin.projects.edit',compact('project'));
     }
 
-    public function update(Request $request){
+    public function update(ProjectRequest $request){
       try{
           $project=Project::find($request->id);
 

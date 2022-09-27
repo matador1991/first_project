@@ -2,7 +2,7 @@
 @section('css')
 
 @section('title')
-    {{trans('member.edit')}}
+    {{trans('page.edit')}}
 @stop
 @endsection
 @section('page-header')
@@ -10,12 +10,12 @@
     <div class="page-title mt-2 pt-5">
         <div class="row ">
             <div class="col-sm-6">
-                <h4 class="mb-0">{{trans('member.edit')}}</h4>
+                <h4 class="mb-0">{{trans('page.edit')}}</h4>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
                     <li class="breadcrumb-item"><a href="#" class="default-color">{{trans('dashboard.dashboard')}}</a></li>
-                    <li class="breadcrumb-item active">{{trans('member.edit')}}</li>
+                    <li class="breadcrumb-item active">{{trans('page.edit')}}</li>
                 </ol>
             </div>
         </div>
@@ -29,14 +29,14 @@
         <div class="card-content collapse show">
             <div class="card-body">
                 <form class="form"
-                      action="{{route('member.update')}}"
+                      action="{{route('page.update')}}"
                       method="POST"
                       enctype="multipart/form-data">
                     @csrf
-                    <input name="id" type="text" hidden value="{{$member->id}}">
-                    <h4 class="form-section"><i class="ft-home"></i> {{trans('member.data')}} </h4>
+                    <input name="id" type="text" hidden value="{{$page->id}}">
+                    <h4 class="form-section"><i class="ft-home"></i> {{trans('page.data')}} </h4>
                     <div class="row justify-content-center">
-                        <img style="width: 150px; height: 150px" src="{{asset($member->image)}}">
+                        <img style="width: 150px; height: 150px" src="{{asset($page->image)}}">
                     </div>
                     <div class=" row pt-2 pb-2">
                         <div class="col-md-12">
@@ -50,12 +50,12 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="projectinput1">
-                                    {{trans('member.name_ar')}}
+                                    {{trans('page.name_ar')}}
                                 </label>
                                 <input type="text" id="name"
                                        class="form-control"
                                        placeholder="  "
-                                       value="{{$member->getTranslation('name' , 'ar')}}"
+                                       value="{{$page->getTranslation('name' , 'ar')}}"
                                        name="name_ar">
                                 @if($errors->has('name_ar'))
                                     <div class="error">{{ $errors->first('name_ar') }}</div>
@@ -65,12 +65,12 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="projectinput1">
-                                    {{trans('member.name_en')}}
+                                    {{trans('page.name_en')}}
                                 </label>
                                 <input type="text" id="name"
                                        class="form-control"
                                        placeholder="  "
-                                       value="{{$member->getTranslation('name' , 'en')}}"
+                                       value="{{$page->getTranslation('name' , 'en')}}"
                                        name="name_en">
                                 @if($errors->has('name_en'))
                                     <div class="error">{{ $errors->first('name_en') }}</div>
@@ -79,42 +79,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="projectinput1">
-                                    {{trans('member.position_ar')}}
-                                </label>
-                                <input type="text" id="name"
-                                       class="form-control"
-                                       placeholder="  "
-                                       value="{{$member->getTranslation('position','ar')}}"
-                                       name="position_ar">
-                                @if($errors->has('position_ar'))
-                                    <div class="error">{{ $errors->first('position_ar') }}</div>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="projectinput1">
-                                    {{trans('member.position_en')}}
-                                </label>
-                                <input type="text" id="name"
-                                       class="form-control"
-                                       placeholder="  "
-                                       value="{{$member->getTranslation('position', 'en')}}"
-                                       name="position_en">
-                                @if($errors->has('position_en'))
-                                    <div class="error">{{ $errors->first('position_en') }}</div>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
                         <div class="col-md-12">
                             <div class="form-group pt-1 ">
-                                <label for="switcheryColor4">{{trans('member.description_ar')}} </label>
-                                <textarea id="summernote1" name="description_ar" class="form-control">{{$member->getTranslation('description' , 'ar')}}</textarea>
+                                <label for="switcheryColor4">{{trans('page.description_ar')}} </label>
+                                <textarea id="summernote1" name="description_ar" class="form-control">{{$page->getTranslation('description' , 'ar')}}</textarea>
                                 @if($errors->has('description_ar'))
                                     <div class="error">{{ $errors->first('description_ar') }}</div>
                                 @endif
@@ -124,8 +92,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group pt-1 ">
-                                <label for="switcheryColor4">{{trans('member.description_en')}} </label>
-                                <textarea id="summernote2" name="description_en" class="form-control">{{$member->getTranslation('description' , 'en')}}</textarea>
+                                <label for="switcheryColor4">{{trans('page.description_en')}} </label>
+                                <textarea id="summernote2" name="description_en" class="form-control">{{$page->getTranslation('description' , 'en')}}</textarea>
                                 @if($errors->has('description_en'))
                                     <div class="error">{{ $errors->first('description_en') }}</div>
                                 @endif

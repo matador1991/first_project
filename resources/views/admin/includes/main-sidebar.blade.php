@@ -21,13 +21,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{route('setting.index')}}">
-                            <div class="pull-left"><i class="ti-settings"></i><span
-                                    class="right-nav-text">{{trans('sidebar.setting')}}</span></div>
-                            <div class="clearfix"></div>
-                        </a>
-                    </li>
-                    <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#service">
                             <div class="pull-left"><i class="ti-help"></i><span
                                     class="right-nav-text">{{trans('sidebar.service')}}</span></div>
@@ -53,7 +46,7 @@
                     </li>
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#project">
-                            <div class="pull-left"><i class="ti-file"></i><span
+                            <div class="pull-left"><i class="ti-bag"></i><span
                                     class="right-nav-text">{{trans('sidebar.project')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -65,7 +58,7 @@
                     </li>
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#member">
-                            <div class="pull-left"><i class="ti-file"></i><span
+                            <div class="pull-left"><i class="ti-user"></i><span
                                     class="right-nav-text">{{trans('sidebar.member')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -76,9 +69,29 @@
                         </ul>
                     </li>
                     <li>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#page">
+                            <div class="pull-left"><i class="ti-file"></i><span
+                                    class="right-nav-text">{{trans('sidebar.page')}}</span></div>
+                            <div class="pull-right"><i class="ti-plus"></i></div>
+                            <div class="clearfix"></div>
+                        </a>
+                        <ul id="page" class="collapse" data-parent="#page">
+                            <li><a href="{{route('page.index')}}">{{trans('sidebar.page-menu')}}</a></li>
+                            <li><a href="{{route('page.create')}}">{{trans('sidebar.addPage')}}</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    <li>
                         <a href="{{route('news_letter.index')}}">
-                            <div class="pull-left"><i class="ti-pencil"></i><span
+                            <div class="pull-left"><i class="ti-email"></i><span
                                     class="right-nav-text">{{trans('sidebar.news_letter')}}</span></div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('setting.index')}}">
+                            <div class="pull-left"><i class="ti-settings"></i><span
+                                    class="right-nav-text">{{trans('sidebar.setting')}}</span></div>
                             <div class="clearfix"></div>
                         </a>
                     </li>

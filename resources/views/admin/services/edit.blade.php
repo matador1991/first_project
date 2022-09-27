@@ -83,6 +83,9 @@
                             <div class="form-group pt-1 ">
                                 <label for="switcheryColor4">{{trans('service.description_ar')}} </label>
                                 <textarea id="summernote1" name="description_ar" class="form-control">{{$service->getTranslation('description' , 'ar')}}</textarea>
+                                @if($errors->has('description_ar'))
+                                    <div class="error">{{ $errors->first('description_ar') }}</div>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -91,6 +94,9 @@
                             <div class="form-group pt-1 ">
                                 <label for="switcheryColor4">{{trans('service.description_en')}} </label>
                                 <textarea id="summernote2" name="description_en" class="form-control">{{$service->getTranslation('description' , 'en')}}</textarea>
+                                @if($errors->has('description_en'))
+                                    <div class="error">{{ $errors->first('description_en') }}</div>
+                                @endif
                             </div>
                         </div>
                     </div>

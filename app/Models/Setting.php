@@ -13,4 +13,8 @@ class Setting extends Model
     protected $guarded=[];
     public $timestamps=true;
     public $translatable=['title','author','keywords','description','address'];
+
+    public function getSettings(){
+      return  $settings=Self::all();
+    }
 }

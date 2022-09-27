@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ClientRequest;
 use App\Models\Client;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 
@@ -26,7 +26,7 @@ class ClientController extends Controller
       return view('admin.clients.create');
   }
 
-  public function store(Request $request){
+  public function store(ClientRequest $request){
       try{
 
           Client::create([
@@ -59,7 +59,7 @@ class ClientController extends Controller
         return view('admin.clients.edit',compact('client'));
     }
 
-    public function update(Request $request){
+    public function update(ClientRequest $request){
       try{
           $client=client::find($request->id);
 

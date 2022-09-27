@@ -10,7 +10,7 @@
     <div class="page-title">
         <div class="row">
             <div class="col-sm-6">
-                <h4 class="mb-0"> ncvlxcnvxcnvxcv</h4>
+                <h4 class="mb-0">Login</h4>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
@@ -33,7 +33,7 @@
                             <div class="card-header border-0">
                                 <div class="card-title text-center">
                                     <div class="p-1">
-                                        <img style="width:120px;height: 50px" src="{{asset('assets/images/logo-icon-dark.png')}}" alt="LOGO"/>
+                                        <img style="width:120px;height: 50px" src="{{asset('admin/assets/images/logo-icon-dark.png')}}" alt="LOGO"/>
                                     </div>
                                 </div>
                                 <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2">

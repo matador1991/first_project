@@ -3,8 +3,8 @@
 <nav class="admin-header navbar navbar-default col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <!-- logo -->
     <div class="text-left navbar-brand-wrapper">
-        <a class="navbar-brand brand-logo" href="{{route('dashboard')}}"><img src="{{asset('assets/images/logo-dark.png')}}" alt=""></a>
-        <a class="navbar-brand brand-logo-mini" href="{{route('dashboard')}}"><img src="{{asset('assets/images/logo-icon-dark.png')}}"
+        <a class="navbar-brand brand-logo" href="{{route('dashboard')}}"><img src="{{asset($settings[0]->logo)}}" alt=""></a>
+        <a class="navbar-brand brand-logo-mini" href="{{route('dashboard')}}"><img src="{{asset('admin/assets/images/logo-icon-dark.png')}}"
                                                                                    alt=""></a>
     </div>
     <!-- Top bar left -->
@@ -30,10 +30,10 @@
             <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 @if (App::getLocale() == 'ar')
                     {{ LaravelLocalization::getCurrentLocaleName() }}
-                    <img src="{{ URL::asset('assets/images/flags/SA.png') }}" alt="">
+                    <img src="{{ URL::asset('admin/assets/images/flags/AE.png') }}" alt="">
                 @else
                     {{ LaravelLocalization::getCurrentLocaleName() }}
-                    <img src="{{ URL::asset('assets/images/flags/US.png') }}" alt="">
+                    <img src="{{ URL::asset('admin/assets/images/flags/US.png') }}" alt="">
                 @endif
             </button>
             <div class="dropdown-menu">
@@ -119,7 +119,7 @@
         <li class="nav-item dropdown mr-30">
             <a class="nav-link nav-pill user-avatar" data-toggle="dropdown" href="#" role="button"
                aria-haspopup="true" aria-expanded="false">
-                <img src="{{asset('assets/images/profile-avatar.jpg')}}" alt="avatar">
+                <img src="{{asset('admin/assets/images/profile-avatar.jpg')}}" alt="avatar">
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-header">

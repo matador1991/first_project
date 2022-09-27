@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TeamMemberRequest;
 use App\Models\TeamMember;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 
@@ -26,7 +26,7 @@ class TeamMemberController extends Controller
       return view('admin.team_members.create');
   }
 
-  public function store(Request $request){
+  public function store(TeamMemberRequest $request){
       try{
 
           TeamMember::create([
@@ -59,7 +59,7 @@ class TeamMemberController extends Controller
         return view('admin.team_members.edit',compact('member'));
     }
 
-    public function update(Request $request){
+    public function update(TeamMemberRequest $request){
       try{
           $members=TeamMember::find($request->id);
 

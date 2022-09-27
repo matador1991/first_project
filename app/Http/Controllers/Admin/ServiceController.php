@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ServiceRequest;
 use App\Models\Admin;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -24,11 +25,11 @@ class ServiceController extends Controller
   }
 
   public function create(){
-      $services=Service::whereNull('parent_id')->get();
+      $services=Service::get();
       return view('admin.services.create',compact('services'));
   }
 
-  public function store(Request $request){
+  public function store(ServiceRequest $request){
       try{
 
           if($request->has('status')){
@@ -70,7 +71,7 @@ class ServiceController extends Controller
         return view('admin.services.edit',compact('service','services'));
     }
 
-    public function update(Request $request){
+    public function update(ServiceRequest $request){
       try{
           $service=Service::find($request->id);
           if($request->has('status')){

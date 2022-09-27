@@ -67,7 +67,7 @@ Route::group([
             route::get('/delete/{id}','ProjectController@delete')->name('project.delete');
         });
 
-        //Team Member Operations
+        //Team Members Operations
         Route::group(['prefix'=>'team_members'],function (){
             route::get('/','TeamMemberController@index')->name('member.index');
             route::get('/create','TeamMemberController@create')->name('member.create');
@@ -75,6 +75,16 @@ Route::group([
             route::get('/edit/{id}','TeamMemberController@edit')->name('member.edit');
             route::post('/update','TeamMemberController@update')->name('member.update');
             route::get('/delete/{id}','TeamMemberController@delete')->name('member.delete');
+        });
+
+        //pages Operations
+        Route::group(['prefix'=>'pages'],function (){
+            route::get('/','PageController@index')->name('page.index');
+            route::get('/create','PageController@create')->name('page.create');
+            route::post('/store','PageController@store')->name('page.store');
+            route::get('/edit/{id}','PageController@edit')->name('page.edit');
+            route::post('/update','PageController@update')->name('page.update');
+            route::get('/delete/{id}','PageController@delete')->name('page.delete');
         });
 
         //News_Letters Operations
